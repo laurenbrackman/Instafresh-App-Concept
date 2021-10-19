@@ -1,0 +1,20 @@
+:root {
+    --if-lightg: #deedd6;
+    --if-darkg: #0aad0a;
+    --if-orange: #ff8200;
+    --if-body-font-family: Verdana, Geneva, sans-serif;
+}
+
+#logo{
+    max-height: 50px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .col-sm img:hover {
+    filter: blur(10px);
+  }
