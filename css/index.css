@@ -18,3 +18,14 @@
   .col-sm img:hover {
     filter: blur(10px);
   }
+
+  @media (min-width: 900px){
+    header{
+      background-image: url("../img/home-background.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position-x: right;
+    }
+  }
+
+  
