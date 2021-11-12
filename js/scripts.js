@@ -31,13 +31,25 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    //Fill in recipe information from JSON file
+    let xhr = new XMLHttpRequest();
+    xhr.responseType = "json"; // "text", "json", "document" for XML
+    xhr.open("GET", "recipes.json");
+    xhr.send();
+    
+    //Load
+    xhr.addEventListener("load", function () {
+        let recipeListings = xhr.response
+        console.log(recipeListings)
+    });
+
+    let recipes = document.getElementsByClassName('col-sm');
+    for (let recipe of recipes){
+        let name = "classic-beef-chili";
+        recipe.innerHTML = `<img src='img/${name}.jpg'></img>`;
+        recipe.onclick= function(){
+            recipe.innerHTML = "<div>Selected</div>";
+        }
+    };
 });
-
-let recipes = document.getElementsByClassName('col-sm');
-for (let recipe of recipes){
-    recipe.onclick = function(){
-        recipe.innerHTML = "<div class='btn btn-lg btn-light'>Selected</div>";
-    }
-}
-
 
