@@ -26,7 +26,7 @@
 					   "Borlotti Beans": {"amount" : "1",  "unit": "box"},
 					   "Mexican Spice Blend": {"amount" : "1",  "unit": "units"},
 					   "Crushed Tomatoes": {"amount" : "1",  "unit": "cans"},
-					   "Sour Cream": {"amount" : "4",  "unit": "tablespoons"},
+					   "Sour Cream": {"amount" : "4",  "unit": "tablespoons"}
 					},
 	  "not-included": ["olive oil", "salt", "pepper"]
     },
@@ -63,7 +63,7 @@
       "subcaption": "with Crispy Potato Wedges & Creamy Mustard Dipping Sauce",
       "description": "What’s not to love about the classic hoagie {or sub, or grinder, or wedge} filled with savory beef, caramelized veggies, and melty cheese? We’ll wait. In the meantime, our homage to the Philly classic boasts beef simmered in a flavorful stock, a blanket of gooey jalapeño-flecked cheese, and roasted bell pepper all stuffed inside toasted rolls. One bite will have you feeling like Rocky after he ran up all those stairs—but better, because you have a sandwich!",
       "ingredients": {"Yukon Gold Potatoes": {"amount" : "12",  "unit": "ounces"},
-					  "Cheddar Cheese": { "0.5", "cups"},
+					  "Cheddar Cheese": { "amount":"0.5", "unit":"cups"},
 					  "Dijon Mustard": { "amount" : "2",  "unit": "teaspoons"},
 					  "Panko Breadcrumbs": { "amount" : "1",  "unit": "cups"},
 					  "Ground Beef": { "amount" : "10",  "unit": "ounces"},
@@ -137,7 +137,7 @@
 					  "Veggie Stock Concentrate": { "amount" : "8",  "unit": "ounces"},
 					  "Roma Tomato": { "amount" : "1",  "unit": "units"},
 					  "Cilantro": { "amount":"0.25", "unit":"ounces"},
-					  "Monterey Jack Cheese": { "0.25", "cups"},
+					  "Monterey Jack Cheese": { "amount":"0.25", "unit":"cups"},
 					  "Blue Corn Tortilla Chips": { "amount" : "3",  "unit": "ounces"},
 					  "Soy Sauce": { "amount" : "6",  "unit": "tablespoons"},
 					  "Lime": { "amount" : "1",  "unit": "units"},
