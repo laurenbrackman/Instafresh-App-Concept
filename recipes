@@ -1,6 +1,7 @@
 {
   "recipes": {
     "cherry-balsamic-pork": {
+		"parsedName": "Cherry Balsamic Pork",
       "subcaption": "with Broccoli & Thyme-Roasted Potatoes",
       "description": "Part sweet, part tangy, and all-around delicious—that’s the thick and super flavorful glaze we have in store for you to drizzle over these pork chops. The rich cherry and balsamic flavors balance each other out perfectly. We’ve kept the sides simple with roasted broccoli and potatoes to allow the meat and sauce to shine. And boy, do they steal the show.",
       "ingredients": {"Yukon Gold Potatoes": {"amount" : "12", "unit": "ounces"}, 
@@ -14,7 +15,7 @@
 	  "not-included": ["cooking oil", "sugar", "salt", "butter", "pepper"]
 	},
 	  
-    "classic-beef-chili": {
+    "classic-beef-chili": { "parsedName": "Classic Beef Chili",
       "subcaption": "with Borlotti Beans, Poblano Pepper, and Cheddar Cheese",
       "description": "Chili is a game-day grub staple for good reason: it scores a touchdown with pretty much every person’s palate, no matter which team they’re rooting for. In this version, we’re heating things up with poblano pepper, borlotti beans, ground beef, and the dynamic spice duo of chili powder and oregano, then cooling it down just a tad with a dollop of sour cream.",
       "ingredients":  {"Scallions": {"amount" : "2",  "unit": "units"},
@@ -30,7 +31,7 @@
 					},
 	  "not-included": ["olive oil", "salt", "pepper"]
     },
-    "heirloom-tomato-flatbread": {
+    "heirloom-tomato-flatbread": { "parsedName": "Heirloom Tomato Flatbread",
       "subcaption": "with Pesto, Fresh Mozzarella, and Balsamic Greens",
       "description": "We can’t think of a better way to showcase the glory of perfectly juicy heirloom grape tomatoes than on a flatbread, where they shine like gems amidst a landscape of mozzarella, pesto, and greens. After a bake in the oven, they come out soft, wilted, and bursting with juices—the sort that dribble down your chin in the most delightfully messy way.",
       "ingredients":  {"Heirloom Grape Tomatoes": {"amount" : "4",  "unit": "ounces"},
@@ -44,7 +45,7 @@
 					},
 	  "not-included": ["olive oil", "salt", "pepper"]
     },
-    "parmesan-chicken-strips": {
+    "parmesan-chicken-strips": {"parsedName": "Parmesan Chicken Strips",
       "subcaption": "with Rosemary Fries, Green Beans, and Honey Mustard Sauce",
       "description": "A balanced meal that’s adult AND kid approved? Yes, please! Our chefs opted to toast the panko to ensure it’s as crunchy as possible before combining it with Parmesan and using it to bread chicken-breast strips. After they’re baked to deep golden perfection in the oven alongside green beans and potato wedges, there’s nothing stopping everyone in your gang from gobbling it all right up.",
       "ingredients": {"Yukon Gold Potatoes": {"amount" : "24",  "unit": "ounces"},
@@ -59,7 +60,7 @@
 	  },
 	  "not-included": ["olive oil", "salt", "pepper"]
     },
-    "philly-style-cheese-melts": {
+    "philly-style-cheese-melts": {"parsedName": "Philly-style Cheese Melts",
       "subcaption": "with Crispy Potato Wedges & Creamy Mustard Dipping Sauce",
       "description": "What’s not to love about the classic hoagie {or sub, or grinder, or wedge} filled with savory beef, caramelized veggies, and melty cheese? We’ll wait. In the meantime, our homage to the Philly classic boasts beef simmered in a flavorful stock, a blanket of gooey jalapeño-flecked cheese, and roasted bell pepper all stuffed inside toasted rolls. One bite will have you feeling like Rocky after he ran up all those stairs—but better, because you have a sandwich!",
       "ingredients": {"Yukon Gold Potatoes": {"amount" : "12",  "unit": "ounces"},
@@ -78,7 +79,7 @@
 					},
 	  "not-included": ["vegetable oil", "salt", "pepper"]
     },
-    "sesame-shrimp": {
+    "sesame-shrimp": {"parsedName": "Sesame Shrimp",
       "subcaption": "with Ginger Scallion Rice and Crispy Green Beans",
       "description": "If you’re like us, you’ve seen a lot of stir-fries in your day. But thanks to our sweet hoisin marinade, aromatic rice, and sprinkle of nutty sesame seeds, this one is bound to top them all. Even the pickiest of eaters will love it. Sounds like a win-win to us.",
       "ingredients": {"Shrimp": { "amount" : "10",  "unit": "ounces"},
@@ -93,7 +94,7 @@
 	},
 	  "not-included": ["vegetable oil", "salt", "pepper"]
     },
-    "sriracha-turkey-burgers": {
+    "sriracha-turkey-burgers": {"parsedName": "Sriracha Turkey Burgers",
       "subcaption": "with Sweet Potato Chips and Ginger-Dressed Greens",
       "description": "Have you jumped on the sriracha bandwagon yet? If not, these burgers might convince you to come aboard {and if you already have, they’re sure to delight}. The spicy sauce is mixed right into the turkey patties, plus it spikes the mayo that’s slathered on top. Add a ginger-dressed salad to the side, and you’ve got an impeccable combination of both cooling and fiery flavors.",
       "ingredients": {"Ground Turkey": { "amount" : "10",  "unit": "ounces"},
@@ -111,7 +112,7 @@
 	},
 	  "not-included": ["vegetable oil", "salt", "pepper"]
     },
-    "teryaki-chicken-tenders": {
+    "teryaki-chicken-tenders": {"parsedName": "Teryaki Chicken Tenders",
       "subcaption": "with Jasmine Rice and Green Beans",
       "description": "Soy to the world! The time for a simple chicken stir-fry recipe has come. These tenders are tossed in a thick teriyaki glaze, which coats each piece in a flavorful blend of soy sauce, garlic, ginger, and sesame. Served atop a bed of jasmine rice with green beans to the side, they bring a tour-de-force of Asian-style flavors that both kids and adults will find easy to love.",
       "ingredients": {"Ginger": { "amount" : "1",  "unit": "units"},
@@ -129,7 +130,7 @@
 	},
 	  "not-included": ["vegetable oil", "salt", "pepper", "sugar"]
     },
-    "veggie-burrito-bowls": {
+    "veggie-burrito-bowls": {"parsedName": "Veggie Burrito Bowls",
       "subcaption": "with Blue Corn Tortilla Chips & Tomato Salsa",
       "description": "The beauty of the burrito bowl is that you can do anything you want with it—just start with some rice and let your imagination run wild. Our chefs picked a fabulous combination of veggies and additional toppings for this one: a tomato and charred corn salsa is at the center of it all, then lime crema and a sprinkle of Mexican cheese bump things up a notch. And while we’re huge fans of the beans in the rice, the thing that makes this a real winner might just be the tortilla chips for scooping everything up.",
       "ingredients": {"Yellow Onion": { "amount" : "1",  "unit": "units"},

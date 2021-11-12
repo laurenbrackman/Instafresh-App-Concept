@@ -46,7 +46,9 @@ window.addEventListener('DOMContentLoaded', event => {
     let recipes = document.getElementsByClassName('col-sm');
     for (let recipe of recipes){
         let name = "classic-beef-chili";
-        recipe.innerHTML = `<img src='img/${name}.jpg'></img>`;
+        let parsedName = "Classic Beef Chili";
+        let subcaption = "with beef and other fun ingredients"
+        recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
         recipe.onclick= function(){
             recipe.innerHTML = "<div>Selected</div>";
         }
