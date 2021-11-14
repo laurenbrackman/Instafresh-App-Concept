@@ -16,7 +16,7 @@
   }
 
   .col-sm img:hover {
-    filter: blur(10px);
+    transform: scale(1.05);
   }
 
   @media (min-width: 900px){

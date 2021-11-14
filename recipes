@@ -60,7 +60,7 @@
 	  },
 	  "not-included": ["olive oil", "salt", "pepper"]
     },
-    "philly-style-cheese-melts": {"parsedName": "Philly-style Cheese Melts",
+    "philly-style-beef-melts": {"parsedName": "Philly-style Beef Melts",
       "subcaption": "with Crispy Potato Wedges & Creamy Mustard Dipping Sauce",
       "description": "What’s not to love about the classic hoagie {or sub, or grinder, or wedge} filled with savory beef, caramelized veggies, and melty cheese? We’ll wait. In the meantime, our homage to the Philly classic boasts beef simmered in a flavorful stock, a blanket of gooey jalapeño-flecked cheese, and roasted bell pepper all stuffed inside toasted rolls. One bite will have you feeling like Rocky after he ran up all those stairs—but better, because you have a sandwich!",
       "ingredients": {"Yukon Gold Potatoes": {"amount" : "12",  "unit": "ounces"},

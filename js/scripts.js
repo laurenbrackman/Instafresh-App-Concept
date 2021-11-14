@@ -49,9 +49,17 @@ window.addEventListener('DOMContentLoaded', event => {
         let parsedName = "Classic Beef Chili";
         let subcaption = "with beef and other fun ingredients"
         recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
+        let selected = false;
         recipe.onclick= function(){
-            recipe.innerHTML = "<div>Selected</div>";
-        }
+            if(selected){
+                selected = false;
+                recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
+            }
+            else{
+                selected = true;
+                recipe.innerHTML = `<img src='img/${name}-selected.png'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
+            }
+        }   
     };
 });
 
