@@ -33,17 +33,24 @@ window.addEventListener('DOMContentLoaded', event => {
 
     //Fill in recipe information from JSON file
     let xhr = new XMLHttpRequest();
-    xhr.responseType = "json"; // "text", "json", "document" for XML
-    xhr.open("GET", "recipes.json");
-    xhr.send();
-    
-    //Load
-    xhr.addEventListener("load", function () {
-        let recipeListings = xhr.response
-        console.log(recipeListings)
-    });
+    xhr.responseType = "json"; 
+    let url = "json/recipes.json";
 
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var recipeArray = JSON.parse(this.responseText);
+            console.log(recipeArray);
+            populate(recipeArray);
+        }
+    };
+
+    xhr.open("GET", url, true);
+    xhr.send();
+});
+
+function populate(arr){
     let recipes = document.getElementsByClassName('col-sm');
+    let counter = 0;
     for (let recipe of recipes){
         let name = "classic-beef-chili";
         let parsedName = "Classic Beef Chili";
@@ -60,6 +67,6 @@ window.addEventListener('DOMContentLoaded', event => {
                 recipe.innerHTML = `<img src='img/${name}-selected.png'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
             }
         }   
+        counter += 1;
     };
-});
-
+}
