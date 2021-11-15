@@ -103,15 +103,29 @@ function addGroceries(recipe){
         delete groceries["No ingredients"];
     }
     for(ingredient in recipe){
-     //   let amounts =  Object.values(recipe[ingredient]);
-        groceries[ingredient]=recipe[ingredient];
+        if(groceries[ingredient]){
+            let oAmount = parseFloat(Object.values(groceries[ingredient])[0]);
+            let aAmount =  parseFloat(Object.values(recipe[ingredient])[0]);
+            groceries[ingredient]['amount'] = oAmount + aAmount;
+        }
+        else{
+            groceries[ingredient]=recipe[ingredient];
+        }
     }
 }
 
 function removeGroceries(recipe){
     for(ingredient in recipe){
-    //    let amounts = Object.values(groceries[ingredient])
-        delete groceries[ingredient];
+        if(groceries[ingredient]){
+            let rAmount = parseFloat(Object.values(recipe[ingredient])[0]);
+            let tAmount = parseFloat(Object.values(groceries[ingredient])[0]);
+            if(tAmount > rAmount){
+                groceries[ingredient]['amount'] = tAamount - rAmount;
+            }
+            else{
+                delete groceries[ingredient];
+            }
+        }
     }
     if(Object.keys(groceries).length == 0){
         groceries['No ingredients'] = '0';
