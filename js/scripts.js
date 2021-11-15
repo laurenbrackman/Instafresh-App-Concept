@@ -50,7 +50,9 @@ window.addEventListener('DOMContentLoaded', event => {
 
     xhr.open("GET", url, true);
     xhr.send();
+
 });
+
 
 function parseJSON(json){
     var result = [];
@@ -72,18 +74,29 @@ function populate(arr, names){
         let name = names[counter];
         let parsedName = arrayItem['parsedName'];
         let subcaption = arrayItem['subcaption'];
-        recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
+        let description = arrayItem['description'];
+        recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><h5>${subcaption}</h5><p>${description}</p>`;
         let selected = false;
         recipe.onclick= function(){
             if(selected){
                 selected = false;
-                recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
+                recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><h5>${subcaption}</h5><p>${description}</p>`;
             }
             else{
                 selected = true;
-                recipe.innerHTML = `<img src='img/${name}-selected.png'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
+                recipe.innerHTML = `<img src='img/${name}-selected.png'></img><h3>${parsedName}</h3><h5>${subcaption}</h5><p>${description}</p>`;
             }
         }   
         counter += 1;
     };
+}
+
+
+//Generate Grocery List
+let generateButton = document.getElementById('generate');
+generateButton.addEventListener('click', () => {addGroceries();});
+
+function addGroceries(){
+    groceryList = document.getElementById('groceryList');
+    groceryList.innerHTML = `<li>No recipes selected (:</li>`;
 }
