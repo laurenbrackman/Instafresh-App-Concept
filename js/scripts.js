@@ -94,7 +94,7 @@ function populate(arr, names){
 }
 
 //Generate Grocery List
-let groceries = {"No ingredients": '0'};
+let groceries = {"No ingredients": ['no', 'amounts']};
 let generateButton = document.getElementById('generate');
 generateButton.addEventListener('click', () => {displayGroceries();});
 
@@ -128,7 +128,7 @@ function removeGroceries(recipe){
         }
     }
     if(Object.keys(groceries).length == 0){
-        groceries['No ingredients'] = '0';
+        groceries['No ingredients'] = ['no', 'amounts'];
     }
 }
 
@@ -140,7 +140,7 @@ function displayGroceries(){
     clearList();
     listTitle = document.getElementById('listTitle');
     listTitle.innerHTML = "Your Grocery List:"
-    generateButton.innerHTML = "Regenerate Grocery List";
+    generateButton.innerHTML = "<a class='btn btn-lg btn-light'>Regenerate Grocery List</a>"
     groceryList = document.getElementById('groceryList');
 
     groceryListArray = Object.entries(groceries);
@@ -149,4 +149,14 @@ function displayGroceries(){
         iAmount = Object.values(groceryListArray[ingredient][1]);
         groceryList.innerHTML += `<li>${iName} - ${iAmount[0]} ${iAmount[1]}</li>`;
     }
+
+    let submitButton = document.getElementById('submit');
+    submitButton.innerHTML="<a class='btn btn-lg btn-light'>Submit</a>"
+    submitButton.addEventListener('click', () => {submitList(submitButton, generateButton)});
+}
+
+//Submit Grocery List
+function submitList(submitButton, generateButton){
+    submitButton.innerHTML="<h3>Thank you for submitting your grocery list! An InstaCart Shopper is now gathering your groceries from a local grocery store!</h3>";
+    generateButton.innerHTML=" ";
 }
