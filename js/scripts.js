@@ -125,6 +125,9 @@ function clearList(){
 
 function displayGroceries(){
     clearList();
+    listTitle = document.getElementById('listTitle');
+    listTitle.innerHTML = "Your Grocery List:"
+    generateButton.innerHTML = "Regenerate Grocery List";
     groceryList = document.getElementById('groceryList');
     groceryListArray = Object.keys(groceries);
     for(ingredient in groceryListArray){
