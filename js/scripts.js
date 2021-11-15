@@ -38,9 +38,13 @@ window.addEventListener('DOMContentLoaded', event => {
 
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var recipeArray = JSON.parse(this.responseText);
-            console.log(recipeArray);
-            populate(recipeArray);
+            let recipeJSON = this.response;
+            let fileNames = [];
+            for(fileName in recipeJSON['recipes']){
+                fileNames.push(fileName);
+            }
+            let recipeArray = parseJSON(recipeJSON);
+            populate(recipeArray, fileNames);
         }
     };
 
@@ -48,13 +52,26 @@ window.addEventListener('DOMContentLoaded', event => {
     xhr.send();
 });
 
-function populate(arr){
+function parseJSON(json){
+    var result = [];
+    var recipes = [];
+    for(var i in json){
+        result.push(json[i]);
+    }
+    for(var i in result[0]){
+        recipes.push(result[0][i])
+    }
+    return recipes;
+}
+
+function populate(arr, names){
     let recipes = document.getElementsByClassName('col-sm');
     let counter = 0;
     for (let recipe of recipes){
-        let name = "classic-beef-chili";
-        let parsedName = "Classic Beef Chili";
-        let subcaption = "with beef and other fun ingredients"
+        arrayItem = arr[counter];
+        let name = names[counter];
+        let parsedName = arrayItem['parsedName'];
+        let subcaption = arrayItem['subcaption'];
         recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><p>${subcaption}</p>`;
         let selected = false;
         recipe.onclick= function(){
