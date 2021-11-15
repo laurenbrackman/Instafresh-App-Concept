@@ -150,9 +150,11 @@ function displayGroceries(){
         groceryList.innerHTML += `<li>${iName} - ${iAmount[0]} ${iAmount[1]}</li>`;
     }
 
-    let submitButton = document.getElementById('submit');
-    submitButton.innerHTML="<a class='btn btn-lg btn-light'>Submit</a>"
-    submitButton.addEventListener('click', () => {submitList(submitButton, generateButton)});
+    if(groceryListArray.length > 1){
+        let submitButton = document.getElementById('submit');
+        submitButton.innerHTML="<a class='btn btn-lg btn-light'>Submit</a>"
+        submitButton.addEventListener('click', () => {submitList(submitButton, generateButton)});
+    }
 }
 
 //Submit Grocery List
