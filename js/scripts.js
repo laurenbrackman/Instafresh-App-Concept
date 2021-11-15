@@ -80,10 +80,12 @@ function populate(arr, names){
         recipe.onclick= function(){
             if(selected){
                 selected = false;
+                removeGroceries(arrayItem['ingredients']);
                 recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><h5>${subcaption}</h5><p>${description}</p>`;
             }
             else{
                 selected = true;
+                addGroceries(arrayItem['ingredients']);
                 recipe.innerHTML = `<img src='img/${name}-selected.png'></img><h3>${parsedName}</h3><h5>${subcaption}</h5><p>${description}</p>`;
             }
         }   
@@ -94,9 +96,27 @@ function populate(arr, names){
 
 //Generate Grocery List
 let generateButton = document.getElementById('generate');
-generateButton.addEventListener('click', () => {addGroceries();});
+let groceries = {"No ingredients": '0'};
+generateButton.addEventListener('click', () => {displayGroceries();});
 
-function addGroceries(){
+function addGroceries(recipe){
+    console.log("Adding " + recipe);
+    for(ingredient in recipe){
+        groceries[ingredient]=recipe[ingredient];
+    }
+}
+
+function removeGroceries(recipe){
+    console.log("Removing " + recipe);
+    for(ingredient in recipe){
+        delete groceries[ingredient];
+    }
+}
+
+function displayGroceries(){
     groceryList = document.getElementById('groceryList');
-    groceryList.innerHTML = `<li>No recipes selected (:</li>`;
+    groceryListArray = Object.keys(groceries);
+    for(ingredient in groceryListArray){
+        groceryList.innerHTML += `<li>${groceryListArray[ingredient]}</li>`;
+    }
 }
