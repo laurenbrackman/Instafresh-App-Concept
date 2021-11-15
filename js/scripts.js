@@ -75,7 +75,6 @@ function populate(arr, names){
         let parsedName = arrayItem['parsedName'];
         let subcaption = arrayItem['subcaption'];
         let description = arrayItem['description'];
-        console.log(`Ingredients for ${parsedName} = ${Object.keys(arrayItem['ingredients'])}`);
         recipe.innerHTML = `<img src='img/${name}.jpg'></img><h3>${parsedName}</h3><h5>${subcaption}</h5><p>${description}</p>`;
         let selected = false;
         recipe.addEventListener('click', function(){
@@ -103,15 +102,15 @@ function addGroceries(recipe){
     if(groceries["No ingredients"]){
         delete groceries["No ingredients"];
     }
-    console.log("Adding " + Object.keys(recipe));
     for(ingredient in recipe){
+     //   let amounts =  Object.values(recipe[ingredient]);
         groceries[ingredient]=recipe[ingredient];
     }
 }
 
 function removeGroceries(recipe){
-    console.log("Removing " + Object.keys(recipe));
     for(ingredient in recipe){
+    //    let amounts = Object.values(groceries[ingredient])
         delete groceries[ingredient];
     }
     if(Object.keys(groceries).length == 0){
@@ -129,8 +128,11 @@ function displayGroceries(){
     listTitle.innerHTML = "Your Grocery List:"
     generateButton.innerHTML = "Regenerate Grocery List";
     groceryList = document.getElementById('groceryList');
-    groceryListArray = Object.keys(groceries);
+
+    groceryListArray = Object.entries(groceries);
     for(ingredient in groceryListArray){
-        groceryList.innerHTML += `<li>${groceryListArray[ingredient]}</li>`;
+        iName = groceryListArray[ingredient][0];
+        iAmount = Object.values(groceryListArray[ingredient][1]);
+        groceryList.innerHTML += `<li>${iName} - ${iAmount[0]} ${iAmount[1]}</li>`;
     }
 }
