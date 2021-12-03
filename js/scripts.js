@@ -152,13 +152,15 @@ function displayGroceries(){
 
     if(groceryListArray.length > 1){
         let submitButton = document.getElementById('submit');
+        let status =document.getElementById('status')
         submitButton.innerHTML="<a class='btn btn-lg btn-light'>Submit</a>"
-        submitButton.addEventListener('click', () => {submitList(submitButton, generateButton)});
+        submitButton.addEventListener('click', () => {submitList(submitButton, generateButton,status)});
     }
 }
 
 //Submit Grocery List
-function submitList(submitButton, generateButton){
-    submitButton.innerHTML="<h3>Thank you for submitting your grocery list! An InstaCart Shopper is now gathering your groceries from a local grocery store!</h3>";
+function submitList(submitButton, generateButton, status){
+    submitButton.innerHTML="<h3>Thank you for submitting your grocery list!</h3>";
     generateButton.innerHTML=" ";
+    status.innerHTML="An InstaCart Shopper is now gathering your groceries from a local grocery store!";
 }
